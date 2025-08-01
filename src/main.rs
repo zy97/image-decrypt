@@ -64,7 +64,7 @@ let image =
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| App::new().service(greet))
-        .bind(("127.0.0.1", 9090))?
+        .bind(("0.0.0.0", 9090))?
         .run()
         .await
 }
