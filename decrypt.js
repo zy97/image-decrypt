@@ -3,13 +3,13 @@ const media_key = CryptoJS[String.fromCharCode(101) + String.fromCharCode(110) +
     .split("_")
     .map((a) => String.fromCharCode(parseInt(a)))
     .join(""));
-console.log(media_key);
+// console.log(media_key);
 // const media_key = '66356439363564663735333336323730';
 const media_iv = CryptoJS[String.fromCharCode(101) + String.fromCharCode(110) + String.fromCharCode(99)][String.fromCharCode(85) + String.fromCharCode(116) + String.fromCharCode(102) + String.fromCharCode(56)][`${String.fromCharCode(112)}arse`]("57_55_98_54_48_51_57_52_97_98_99_50_102_98_101_49"
     .split("_")
     .map((a) => String.fromCharCode(parseInt(a)))
     .join(""));
-console.log(media_iv);
+// console.log(media_iv);
 
 // const media_iv = '39376236303339346162633266626531';
 function decryptImage(word) {
