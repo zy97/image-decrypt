@@ -1,12 +1,10 @@
-[package]
-name = "image-decrypt"
-version = "0.1.0"
-edition = "2024"
+[workspace]
+members = ["image-decrypt"]
+default-members = ["image-decrypt"]
+resolver = "1"
+package.version = "0.1.0"
 
-[dependencies]
-actix-web = "4"
-reqwest = "0.12"
-deno_core = "0.354.0"
-serde_v8 = "0.263.0"
-base64 = "0.22.1"
-moka = { version = "0.12.10", features = ["future"] }
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
